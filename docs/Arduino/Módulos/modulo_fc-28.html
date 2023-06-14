@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta character="utf-8">
+	<title>Módulo FC-28</title> 
+</head>
+
+<body>
+
+    <h1>FC-28 - Módulo de Humedad del Suelo</h1>
+
+        <h2>Especificaciones Técnicas</h2>
+
+        <ul>
+            <li>Voltaje de alimentación: 3.3V - 5V DC (VCC)</li>
+            <li>Corriente de operación: 35mA</li>
+            <li>Voltaje de señal de salida analógico (A0): 0 a</li>
+            <li>VCC</li>
+            <li>Voltaje de señal de salida digital (D0): 3.3V /</li>
+            <li>5V TTL</li>
+            <li>Opamp LM393 en modo comparador, umbral</li>
+            <li>(threshold) regulable por potenciómetro</li>
+            <li>Superficie de electrodo: Estañoo</li>
+            <li>Incluye: Electrodo, placa y cable de conexión</li>
+            <li>Vida útil electrodo sumergido: 3 a 6 meses</li>
+            <li>Dimensiones YL-38: 30*16mm</li>
+            <li>Dimensiones YL-69: 60*20*5mm</li>
+        </ul>
+
+
+        <h2>Descripción</h2>
+
+        <p>El módulo de humedad del suelo, conocido técnicamente como FC-28, de manera más coloquial como higrómetro, se utiliza para medir la humedad existente en la zona de contacto entre sus sensores. Este módulo se suele situar ligeramente enterrado en el suelo, dado que está pensado para la toma de datos de terrenos, tal como puede ser el caso de la tierra que compone unos cultivos, o la arena de un desierto.</p>
+            
+        <p>Si nos fijamos en la Figura 2, podemos dividirlo en tres áreas. A la izquierda se encuentran los pines que conectan con la parte del sensor que está físicamente en contacto con el terreno, mientras que a la derecha se encuentras los que conectan con la placa base de arduino que tengamos.</p>
+        
+        <p>En el centro se pueden destacar tres elementos. Dos de ellos son leds integrados que indican cuando transmite señal y cuando funciona el dispositivo, y el tercer elemento es un potenciómetro. Con este último se puede ajustar la salida digital D0.</p>
+	
+        <p>Una caracter´ıstica que vale la pena destacar es su doble salida, una anal´ogica y otra digital. Esto es importante porque influir´a en el c´odigo que se escriba o como deseemos utilizarlo.</p>
+
+        <p>Si nos fijamos en la salida anal´ogica, podemos obtener valores entre 0 y 1023, siendo el m´ınimo cuando se encuentra extremadamente h´umedo o sumergido en agua. Por el contrario, cuando muestra un valor m´aximo, indica que se encuentra en un terreno muy seco o incluso en contacto con el aire ´unicamente. Generalmente un suelo ligeramente h´umedo ofrece valores entre 600-700, mientras que un suelo seco normal entre 800-1023.</p>
+
+        <p>La escala num´erica anterior se debe a la resistencia del sensor. Si tiene un valor bajo, quiere decir que el valor de la resistencia entre los polos del sensor es tambi´en baja, al igual que cuando es mayor el valor, mayor es la resistencia.</p>
+        
+        <p>Vemos que la relaci´on resistencia-humedad es proporcionalmente directa, aunque nos podemos llegar a preguntar, ¿por qu´e hasta 1023? La respuesta es simple, es la resoluci´on m´axima que permite el sensor en una placa arduino. Nuestras placas arduino b´asicas tienen una resoluci´on de 10 bits a la hora de asignar valores digitales, lo cual se traducen en sistema decimal a los 1023. Si la resoluci´on fuese mayor, tendr´ıamos un rango mayor de valores posibles para medir distintos puntos intermedios de humedad, aunque no ser´a necesario para la mayor´ıa de casos.</p>
+
+        <p>Si empleamos la salida anal´ogica se tiene que probar previamente en el terreno y tomar referencias a distintas humedades del suelo, para as´ı poder realizar cualquier programaci´on en base a par´ametros de manera m´as exacta.</p>
+        
+        <p>Por el contrario, la salida digital es m´as simple, dado que solo tiene dos estados posibles, LOW cuando el suelo no est´a humedo y HIGH cuando lo est´a. Decir que est´a o no est´a h´umedo es relativo, dado que si nos decantamos por este m´etodo, somos nosotros quienes fijamos un umbral o l´ımite entre ambos estados con ayuda del potenci´ometro.</p>
+        
+        <p>Una manera de verlo ser´ıa con una planta. Queremos que se mantenga siempre con una humedad, por lo que regaremos la tierra de la maceta hasta tener el punto que buscamos, y entonces se ajusta el potenci´ometro para que a ese nivel de humedad mande una se˜nal. Cuando se vaya secando y hagamos una captura de la salida, llegar´a un punto donde deje de enviar se˜nal, por lo que mediante c´odigo y otros dispositivos indicamos que active un sistema de riego autom´atico, aunque todo esto se profundizar´a en otro cap´ıtulo en caso de realizar un proyecto pr´actico funcional.</p>
+
+        <h2>Disposición de Pines</h2>
+	
+        La disposici´on de pines del FC-28 se puede dividir en dos secciones. La primera ser´ıa la zona que conecta con el sensor, donde toma la entrada positiva y negativa, y la segunda conecta con nuestro dispositivo arduino.
+
+        En la Tabla 1 se recoge la finalidad de cada uno de ellos, tomando como referencia la Figura 2, numer´andolos de manera descendente en ambos laterales.
+
+        <table>
+            <thead>
+              <tr>
+                <th class="tg-wzu8">Pin</th>
+                <th class="tg-wzu8">Señal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="tg-v0nz">Conectado a sensor</td>
+                <td class="tg-v0nz"></td>
+              </tr>
+              <tr>
+                <td class="tg-v0nz">1</td>
+                <td class="tg-v0nz">Polo positivo</td>
+              </tr>
+              <tr>
+                <td class="tg-v0nz">2</td>
+                <td class="tg-v0nz">Polo negativo</td>
+              </tr>
+              <tr>
+                <td class="tg-v0nz">Conectado a arduino</td>
+                <td class="tg-v0nz"></td>
+              </tr>
+              <tr>
+                <td class="tg-v0nz">3</td>
+                <td class="tg-v0nz">Vcc</td>
+              </tr>
+              <tr>
+                <td class="tg-v0nz">4</td>
+                <td class="tg-v0nz">GND</td>
+              </tr>
+              <tr>
+                <td class="tg-v0nz">5</td>
+                <td class="tg-v0nz">D0</td>
+              </tr>
+              <tr>
+                <td class="tg-v0nz">6</td>
+                <td class="tg-v0nz">A0</td>
+              </tr>
+            </tbody>
+        </table>
+	
+</body>
