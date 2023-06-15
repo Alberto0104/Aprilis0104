@@ -53,16 +53,11 @@
         float: none;
     }
 
-    .text {
-        float: none;
+    .column {
         width: 100%;
-      }
+  }
 
-     
-.image {
-        float: none;
-        width: 100%;
-      }}
+}
 
 
 
@@ -83,7 +78,7 @@
 }
 
 .image {
-    width: auto;
+    width: 25%;
   }
   
 .text {
