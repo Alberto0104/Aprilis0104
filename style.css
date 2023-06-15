@@ -70,19 +70,20 @@
 
 /* Create two equal columns that floats next to each other */
 
-.column{
+.column-text{
     float: left;
+    width: 75%;
     padding: 10px;
     height: 300px; /* Modify or comment this line */
     background-color: #e9e9e9;
 }
 
-.right{
-  width: 25%;
-}
-
-.left{
-  width: 75%;
+.column-image{
+    float: left;
+    width: 25%;
+    padding: 10px;
+    height: 300px; /* Modify or comment this line */
+    background-color: #e9e9e9;
 }
 
 .column a{
