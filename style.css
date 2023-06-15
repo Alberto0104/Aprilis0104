@@ -53,11 +53,16 @@
         float: none;
     }
 
-    .column {
+    .text {
         float: none;
         width: 100%;
       }
-}
+
+     
+.image {
+        float: none;
+        width: 100%;
+      }}
 
 
 
