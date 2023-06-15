@@ -93,14 +93,14 @@
     background-color: #d7d7d7;
 }
 
-.column-image-right{
+.column-image-left{
     width: auto;
     padding: 10px;
     height: 300px; /* Modify or comment this line */
     background-color: #e9e9e9;
 }
 
-.column-text-left, .column-text-right a{
+.column-text-left a, .column-text-right a{
     float: left;
     text-align: center;
     padding: 12px;
