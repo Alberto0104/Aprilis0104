@@ -79,14 +79,14 @@
 }
 
 .column-image{
-    float: left;
+    float: right;
     width: 25%;
     padding: 10px;
     height: 300px; /* Modify or comment this line */
     background-color: #e9e9e9;
 }
 
-.column a{
+.column-text a{
     float: left;
     text-align: center;
     padding: 12px;
