@@ -52,6 +52,10 @@
     .header-right {
         float: none;
     }
+
+    .column {
+        width: 100%;
+      }
 }
 
 
@@ -62,16 +66,10 @@
 
 /* Clase proyect-row and proyect-column
 
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
 
 /* Create two equal columns that floats next to each other */
 
-.column-text {
+.column{
     float: left;
     width: 75%;
     padding: 10px;
@@ -79,15 +77,15 @@
     background-color: #e9e9e9;
 }
 
-.column-image {
-    float: left;
+.image {
     width: 25%;
-    padding: 10px;
-    height: 300px; /* Modify or comment this line */
-    background-color: #e0e0e0;
-}
+  }
+  
+  .text {
+    width: 75%;
+  }
 
-.column-text a{
+.column a{
     float: left;
     text-align: center;
     padding: 12px;
@@ -97,4 +95,10 @@
     border-radius: 4px;
     background-color: dodgerblue;
     color: white;   /* Font color */
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
