@@ -77,16 +77,16 @@
     background-color: #e9e9e9;
 }
 
-.image {
-    width: 25%;
-  }
-  
-.text {
-    width: 75%;
+.right{
+  width: 25%;
 }
 
+.left{
+  width: 75%;
+}
+/*
 .column a{
-    float: left;
+    /*float: left;
     text-align: center;
     padding: 12px;
     text-decoration: none;
@@ -94,8 +94,8 @@
     line-height: 25px;
     border-radius: 4px;
     background-color: dodgerblue;
-    color: white;   /* Font color */
-}
+    color: white;   
+}*/
 
 .row:after {
     content: "";
