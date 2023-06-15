@@ -54,6 +54,7 @@
     }
 
     .column {
+        float: none;
         width: 100%;
       }
 }
