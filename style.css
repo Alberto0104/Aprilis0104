@@ -71,15 +71,14 @@
 /* Create two equal columns that floats next to each other */
 
 .column-text{
-    float: left;
-    width: 75%;
+    width: auto;
     padding: 10px;
     height: 300px; /* Modify or comment this line */
     background-color: #d7d7d7;
 }
 
 .column-image{
-    float: left;
+    float: right;
     width: 25%;
     padding: 10px;
     height: 300px; /* Modify or comment this line */
