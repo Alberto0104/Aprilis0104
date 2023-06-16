@@ -202,17 +202,17 @@ body{
     margin-bottom: auto;
 }
   
-.box a{
-      background-color: rgba(242, 243, 244, 0.9);
-      border-radius: 10px;
-      padding: 10px;
-      margin-top: auto;
-      border: 2px solid #626567;
-      position: relative;
-      z-index: 1;
+.container a{
+      /*background-color: rgba(242, 243, 244, 0.9);*/
+      /*border-radius: 10px;*/
+      /*padding: 10px;*/
+      /*margin-top: auto;*/
+      /*border: 2px solid #626567;*/
+      /*position: relative;*/
+      /*z-index: 1;*/
       color: black;
-      text-align: center;
-      padding: 10px;
+      /*text-align: center;*/
+      /*padding: 10px;*/
       text-decoration: none;     
 }
 
