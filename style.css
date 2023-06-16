@@ -1,3 +1,12 @@
+/* Ajuste para navegadores, eliminar bordes y huecos */
+
+body{
+    margin:0; 
+    padding:0;
+}
+
+
+
 /* Clase header */
 
 /* Style the header background and padding */
@@ -72,33 +81,40 @@
 
 .column-text-left{
     width: auto;
-    padding: 10px;
     height: 300px; /* Modify or comment this line */
+    margin-left:20px;
+    margin-right:20px;
+    padding: 10px;
     background-color: #d7d7d7;
 }
 
 .column-image-right{
     float: right;
     width: 25%;
-    padding: 10px;
     height: 300px; /* Modify or comment this line */
+    margin-right:20px;
+    padding: 10px;
     background-color: #e9e9e9;
 }
 
 .column-text-right{
     float: right;
     width: 75%;
-    padding: 10px;
     height: 300px; /* Modify or comment this line */
+    margin-right:20px;
+    padding: 10px;
     background-color: #d7d7d7;
 }
 
 .column-image-left{
     width: auto;
-    padding: 10px;
     height: 300px; /* Modify or comment this line */
+    margin-left:20px;
+    margin-right:20px;
+    padding: 10px;
     background-color: #e9e9e9;
 }
+
 
 .column-text-left a, .column-text-right a{
     float: left;
