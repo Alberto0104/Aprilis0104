@@ -178,7 +178,7 @@ body{
     background-color: rgba(233, 233, 233, 0.25);
 }
   
-h2.box{
+.box h2{
     background-color: rgba(242, 243, 244, 0.9);
     border-radius: 10px;
     padding: 10px;
@@ -190,7 +190,7 @@ h2.box{
     margin-bottom: auto;
 }
 
-p.box{
+.box p{
     background-color: rgba(242, 243, 244, 0.9);
     border-radius: 10px;
     padding: 10px;
@@ -202,7 +202,7 @@ p.box{
     margin-bottom: auto;
 }
   
-a.box{
+.box a{
       background-color: rgba(242, 243, 244, 0.9);
       border-radius: 10px;
       padding: 10px;
