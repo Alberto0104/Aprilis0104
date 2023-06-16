@@ -178,7 +178,19 @@ body{
     background-color: rgba(233, 233, 233, 0.25);
 }
   
-.box h2,p {
+h2.box{
+    background-color: rgba(242, 243, 244, 0.9);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #626567;
+    position: relative;
+    z-index: 1;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+p.box{
     background-color: rgba(242, 243, 244, 0.9);
     border-radius: 10px;
     padding: 10px;
@@ -190,7 +202,7 @@ body{
     margin-bottom: auto;
 }
   
-.box a{
+a.box{
       background-color: rgba(242, 243, 244, 0.9);
       border-radius: 10px;
       padding: 10px;
