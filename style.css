@@ -13,7 +13,13 @@ body{
 /* Style the header background and padding */
 .header {
     overflow: hidden;
-    background-color: #CCCCCC; /* Gray */
+    background-color: #E1E1E1; /* Gray */
+    padding: 20px 10px;
+}
+
+.footer {
+    overflow: hidden;
+    background-color: #000000;
     padding: 20px 10px;
 }
   
