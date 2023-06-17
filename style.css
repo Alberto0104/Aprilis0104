@@ -3,6 +3,7 @@
 body{
     margin:0; 
     padding:0;
+    background-color: #f1f1f1; /* Gray */
 }
 
 
@@ -12,7 +13,7 @@ body{
 /* Style the header background and padding */
 .header {
     overflow: hidden;
-    background-color: #f1f1f1; /* Gray */
+    background-color: #CCCCCC; /* Gray */
     padding: 20px 10px;
 }
   
@@ -42,7 +43,7 @@ body{
   
 /* Style the active/current link */
 .header a.active {
-    background-color: dodgerblue;
+    background-color: #1f8fff;
     color: white;   /* Font color */
 }
   
@@ -179,7 +180,7 @@ body{
 }
   
 .box h2{
-    background-color: rgba(242, 243, 244, 0.9);
+    background-color: #f2f3f4e6;
     border-radius: 10px;
     padding: 10px;
     margin-bottom: 10px;
@@ -191,7 +192,7 @@ body{
 }
 
 .box p{
-    background-color: rgba(242, 243, 244, 0.9);
+    background-color: #f2f3f4e6;
     border-radius: 10px;
     padding: 10px;
     margin-bottom: 10px;
