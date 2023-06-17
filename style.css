@@ -6,7 +6,12 @@ body{
     background-color: #f1f1f1; /* Gray */
 }
 
-
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
 
 /* Clase header */
 
@@ -14,12 +19,6 @@ body{
 .header {
     overflow: hidden;
     background-color: #E1E1E1; /* Gray */
-    padding: 20px 10px;
-}
-
-.footer {
-    overflow: hidden;
-    background-color: #000000;
     padding: 20px 10px;
 }
   
