@@ -241,7 +241,7 @@ body{
 
 
 /* Add media queries for responsiveness - when the screen is 'x'px wide or less*/
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 991px) {
     /* Header, from one row to multiple rows*/
     .header a {
         float: none;
