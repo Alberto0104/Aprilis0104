@@ -3,38 +3,70 @@
 
 <head>
 	<meta character="utf-8", name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Guía sobre Módulos Arduino</title> 
+	<title>Guía sobre Módulos Arduino</title>
+
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="javascriptsfunctions.js"></script>
 </head>
 
 <body>
 
-    <h1 id="introducción">Introducción</h1>
+	<div class="header" id="myHeader">
+		<div>
+			<a href="#default" class="logo">Aprilis0104</a>
+		</div>
+		<div class="header-right">
+			<a href="index.html">Inicio</a>
+    		<a class="active" href="Proyectos.html">Proyectos</a>
+			<a href="Miscelanea.html">Miscelánea</a>
+			<a href="Contacto.html">Contacto</a>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<i class="fa fa-bars"></i>
+			</a>
+		</div>	
+	</div>
+
+	<div class="content">
+		<section>
+			<h1 id="introducción">Introducción</h1>
+
+			<hr>
+
+			<p>Buenos días, buenas tardes, buenas noches. Puede que un bienvenido sea más apropiado, o incluso decir que es un placer que estés aquí conmigo.</p>
+
+			<p>No importa como trate de saludarte, así que vayamos a lo que nos interesa.</p>
+
+			<p>Al igual que a tí y mis compañeros, me gusta el mundillo de la programación y circuitos, por lo que comencé a aprender el uso de Arduino, ver cómo funcionaba, la de cosas que se podían hacer, e incluso compré un set de sensores para profundizar en algunos campos.</p>
+
+			<p>Y como no, pude comprobar lo mismo que se habrán encontrado muchas personas, y es lo dispersa que puede estar la información o lo complicado que puede ser. Hay algunas páginas que tienen algunas guías pero no de todo, o por el contrario se encuentren desactualizadas.</p>
+
+			<p>Con esto, y que me gusta recopilar información para poder comprender mejor los problemas y tener unas bases a las que volver para así no tener que memorizar todo lo que aprendo, pues se me ocurrió hacerme una guía personal sobre los sensores o temas relacionados que he ido trabajando.</p>
+
+			<p>Y como la vida da muchas vueltas, pues acabé hablando con la persona que me dió la idea de hacerlo público para que todo lo que aprendo pueda serle útil a cualquier persona.</p>
+
+			<p>Así que si buscas una guía extensa de mil quinientas páginas con estudios intensivos y gráficas de treinta colores, te digo ya que este no es tu sitio.</p>
+
+			<p>En cambio, si te apetece ampliar tu punto de vista y la manera en la que trabajo, analizo y trato de entender los sensores, puede que te interese seguir este documento (aunque actualmente ya no sea un documento, si no una página web).</p>
+
+			<p>La Guía sobre Sensores, o Guía sobre Módulos Arduino tal y como le he querido llamar en un principio, consiste en una base de información, que me han ido pareciendo relevante, personal sobre distintos tipos de sensores que he ido adquiriendo.</p>
+
+			<p>Y cuando digo relevante no quiero tirar por la borda el trabajo de todos los forofos de los 0 y 1, sino aquello que he considerado interesante a nivel de usuario que soy o eres tú.</p>
+
+			<p>¿Y qué considero interesante? Ni yo lo sé, pero a rasgos básicos me refiero a describir el sensor, su utilidad, esquemas sobre su estructura o que realiza cada pin, códigos donde se hagan pruebas de su uso. Y esto es a nivel básico, porque al principio es normal tener poca información sobre un sensor, pero más adelante quizás le encuentre una aplicación donde obtenga resultados gráficos reales o quiera ampliar lo ya escrito, y todo eso lo incluya aunque sea a posteriori.</p>
+
+			<p>En fin, que me enrollo mucho, lo que quiero decir es que no es una guía profesional, sino un proyecto personal donde me sirva a mí y a quien lo lea para hacer consultas básicas y no depender de veinte enlaces webs distintos. Como experiencia de tabajo va a ser enriquecedor, y si te animas a leerlo y ver como trabajo, te doy mis enhorabuenas, dos besos y un abrazo.</p>
+
+			<p>Así pues, solo puedo despedirme de la siguiente manera:</p>
+
+			<p>Feliz día, año y vida <span class="math inline">♥</span></p>
+
+			<p>Alberto</p>
+		</section>
+	</div>
+    
 	
-	<p>Buenos días, buenas tardes, buenas noches. Puede que un bienvenido sea más apropiado, o incluso decir que es un placer que estés aquí conmigo.</p>
-
-	<p>No importa como trate de saludarte, así que empecemos de nuevo:</p>
-
-	<p>Hola, me llamo Alberto, y si te encuentras leyendo estas palabras es porque al igual que yo, y junto con mis compañeros, eres un amante de las cosas electrónica. Si amante no es la palabra que te define, a lo mejor un aficionado por la materia sea mejor, o incluso un curioso o experto.</p>
-
-	<p>Si buscas una guía extensa de mil quinientas páginas con estudios intensivos y gráficas de treinta colores, te digo ya que este no es tu sitio.</p>
-
-	<p>En cambio, si te apetece ampliar tu punto de vista y la manera en la que trabajo, analizo y trato de entender los sensores, puede que te interese seguir este documento.</p>
-
-	<p>La Guía sobre Sensores, o Guía sobre Módulos Arduino tal y como le he querido llamar en un principio, consiste en una base de información personal sobre distintos tipos de sensores que he ido adquiriendo. Es cierto que si ahora mismo abro el navegador y busco "sensor xyz23 tutorial" o "sensor truru34 ejemplos" podré encontrar miles de enlaces con la información que necesito. De ahí querer crear una guía, donde se recopile en un único sitio toda la información que me parece relevante.</p>
-
-	<p>Y cuando digo relevante no quiero tirar por la borda el trabajo de todos los forofos de los 0 y 1, sino aquello que he considerado interesante a nivel de usuario que soy o eres tú.</p>
-
-	<p>¿Y qué considero interesante? Ni yo lo sé, pero a rasgos básicos me refiero a describir el sensor, su utilidad, esquemas sobre su estructura o que realiza cada pin, códigos donde se hagan pruebas de su uso. Y esto es a nivel básico, porque al principio es normal tener poca información sobre un sensor, pero más adelante quizás le encuentre una aplicación donde obtenga resultados gráficos reales o quiera ampliar lo ya escrito, y todo eso lo incluya aunque sea a posteriori.</p>
-
-	<p>En fin, que me enrollo mucho, lo que quiero decir es que no es una guía profesional, sino un proyecto personal donde me sirva a mí y a quien lo lea para hacer consultas básicas y no depender de veinte enlaces webs distintos. Como experiencia de tabajo va a ser enriquecedor, y si te animas a leerlo y ver como trabajo, te doy mis enhorabuenas, dos besos y un abrazo.</p>
-
-	<p>En la medida de lo posible trataré de mantener un orden y estructura para que todo aquel que quiera leerlo no se vuelva loco, pero os aviso de antemano, si tengo que escribir una reflexión propia o realizar algún tipo de comparativa o analogía, lo voy a hacer, y no me temblará el pulso (o puede que sí, quien sabe).</p>
-
-	<p>Así pues, solo puedo despedirme de la siguiente manera:</p>
-
-	<p>Feliz día, año y vida <span class="math inline">♥</span></p>
-
-	<p>Alberto</p>
+	
 	
 	
 	
