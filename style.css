@@ -4,7 +4,7 @@ body{
     padding:0;
     background-color: #f1f1f1;
     display: flex;
-	flex-direction: column;
+    flex-direction: column;
     min-height: 100vh;
     font-size: 100%;
 }
@@ -15,7 +15,7 @@ hr{
 }
 
 .content{
-	flex: 1;
+    flex: 1;
 }
 
 .footer {
@@ -64,7 +64,7 @@ hr{
     background-color: #E1E1E1;
     padding: 20px 10px;
 }
-  
+
 /* Style the header links */
 .header a, .header-right a{
     float: left;
@@ -77,32 +77,32 @@ hr{
     border-radius: 4px;
     display: block;
 }
-  
+
 /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
 .header a.logo {
     font-size: 25px;
     font-weight: bold;
     /*float:left;*/
 }
-  
+
 /* Change the background color on mouse-over */
 .header a:hover {
     background-color: #ddd;
     color: black;
 }
-  
+
 /* Style the active/current link */
 .header a.active {
     background-color: #1f8fff;
     color: white;
 }
 
-  
+
 /* Float the link section to the right */
 .header-right {
     float: right;
 }
-  
+
 .header .icon{
     display: none;
 }
@@ -209,7 +209,7 @@ hr{
     justify-content: space-between;
     align-items: center;
         
-  	background-size: cover;
+    background-size: cover;
 
     transition: transform 0.3s ease-in-out;
 }
@@ -266,12 +266,12 @@ hr{
 
 /* Model for sensors */
 .inrow-background{
-	width: 100%;
+    width: 100%;
     height: 150px;
     background: #151515;
     position: relative;
     background-repeat: no-repeat;
-  	background-position: right center;
+    background-position: right center;
     background-size: 50%;
     transition: transform 0.3s ease-in-out;
 }
@@ -281,7 +281,7 @@ hr{
 }
 
 .inrow-text{
-	width: 52%;
+    width: 52%;
     height: 150px;
     position: relative;
     display: flex;
@@ -294,14 +294,14 @@ hr{
 }
 
 .inrow-parallelogram {
-  width: 120px;
-  height: 150px;
-  transform: skew(20deg);
-  margin-top: auto;
-  margin-bottom: auto;
-  position: absolute;
-  left: 43%;
-  z-index: 2;
+width: 120px;
+height: 150px;
+transform: skew(20deg);
+margin-top: auto;
+margin-bottom: auto;
+position: absolute;
+left: 43%;
+z-index: 2;
 }
 
 .inrow-text::before{
@@ -325,9 +325,10 @@ hr{
 }
 
 .inrow-text h2{
-	position: relative;
+    position: relative;
     margin-top: auto;
     margin-bottom: auto;
+    font-size: 1.5em;
 }
 
 
@@ -378,40 +379,40 @@ hr{
 @media screen and (max-width: 600px) {
     .header a:not(.logo){display: none;}
     .header a.icon {
-      float: right;
-      display: block;
+    float: right;
+    display: block;
     }
-  }
-  
-  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-  @media screen and (max-width: 600px) {
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
     .header.responsive {position: relative;}
     .header.responsive .icon {
-      position: absolute;
-      right: 0;
-      top: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
     }
     .header.responsive a {
-      float: none;
-      display: block;
-      text-align: left;
+    float: none;
+    display: block;
+    text-align: left;
     }
     .header.responsive .header-right{
         float: left;
         width: 100%;
     }
-  }
+}
 
 
 
 
 
-  /*
-  
-  
-  
-  .inrow-background{
-	width: 100%;
+/*
+
+
+
+.inrow-background{
+    width: 100%;
     height: 150px;
     background: #151515;
     position: relative;
@@ -419,7 +420,7 @@ hr{
 }
 
 .inrow-text{
-	width: 50%;
+    width: 50%;
     height: 150px;
     position: relative;
     display: flex;
@@ -430,14 +431,14 @@ hr{
 }
 
 .inrow-parallelogram {
-  width: 100px;
-  height: 149.5px;
-  transform: skew(20deg);
-  margin-top: auto;
-  margin-bottom: auto;
-  position: absolute;
-  left: 45%;
-  z-index: 2;
+width: 100px;
+height: 149.5px;
+transform: skew(20deg);
+margin-top: auto;
+margin-bottom: auto;
+position: absolute;
+left: 45%;
+z-index: 2;
 }
 
 .inrow-text::before{
@@ -461,20 +462,20 @@ hr{
 }
 
 .inrow-text h2{
-	position: relative;
+    position: relative;
     margin-top: auto;
     margin-bottom: auto;
 }
 
 
 <div class="inrow-background" style="background-image: url('https://cdn.pixabay.com/photo/2017/02/23/15/39/plan-2092499_1280.jpg');">
-	<div>
-    	<div class="inrow-parallelogram" ></div>
-    	<div class="inrow-text">
-        	<h2>XX-123 - Módulo Lipsum</h2>
+    <div>
+        <div class="inrow-parallelogram" ></div>
+        <div class="inrow-text">
+            <h2>XX-123 - Módulo Lipsum</h2>
         </div>
     </div>
-  </div>
-  
-  
-  */
+</div>
+
+
+*/
