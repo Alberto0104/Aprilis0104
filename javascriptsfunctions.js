@@ -17,5 +17,5 @@ function PlantRandomizer() {
 					var diceInput = document.getElementById('idDice').value;
 
       // Mostrar el resultado en el párrafo con id "plantaObtenida"
-      document.getElementById('result').textContent = biomeInput + diceInput;
+      document.getElementById('plantaObtenida').textContent = biomeInput + diceInput;
 }
