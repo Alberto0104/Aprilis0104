@@ -27,7 +27,104 @@ const plantas = [
 	new ObjectPlant("Avataer",["Artic"],"Very Rare"),
 	new ObjectPlant("Basilisk Breath",["Artic"],"Very Rare"),
 	new ObjectPlant("Bee Balm",["Artic"],"Very Common"),
-	new ObjectPlant("Bija Tree",["Artic"],"Rare")
+	new ObjectPlant("Bija Tree",["Artic"],"Rare"),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],""),
+	new ObjectPlant("",[],"")
 ];
 
 
@@ -40,7 +137,22 @@ function PlantRandomizer() {
 
 					let plantBiomeRarity = [];
 					if (diceInput >= 1 && diceInput <= 55){
+						plantBiomeRarity = plantBiome.filter((planta) => planta.rarityString == "Very Common")
+					}
+					else if (diceInput >= 56 && diceInput <= 81){
 						plantBiomeRarity = plantBiome.filter((planta) => planta.rarityString == "Common")
+					}
+					else if (diceInput >= 82 && diceInput <= 93){
+						plantBiomeRarity = plantBiome.filter((planta) => planta.rarityString == "Uncommon")
+					}
+					else if (diceInput >= 94 && diceInput <= 98){
+						plantBiomeRarity = plantBiome.filter((planta) => planta.rarityString == "Rare")
+					}
+					else if (diceInput == 99){
+						plantBiomeRarity = plantBiome.filter((planta) => planta.rarityString == "Very Rare")
+					}
+					else if (diceInput == 100){
+						plantBiomeRarity = plantBiome.filter((planta) => planta.rarityString == "Legendary" && plantBiome.filter((planta) => planta.rarityString == "very Rare")
 					}
 
 					var plantafinal = Math.floor(Math.random() * plantBiomeRarity.length);
