@@ -12,20 +12,9 @@ function myFunction() {
 
 
 function PlantRandomizer() {
-      // Obtener el valor ingresado por el usuario
-      var palabraIngresada = document.getElementById('idBiome').value;
+      // Obtener el bioma ingresado por el jugador
+      var biomeInput = document.getElementById('idBiome').value;
 
-      // Llamar a la función y obtener el resultado
-      var result = procesarPalabra(palabraIngresada);
-
-      // Mostrar el resultado en el párrafo con id "resultado"
-      document.getElementById('result').textContent = result;
-    }
-
-    function procesarPalabra(palabra) {
-      // Hacer alguna operación con la palabra ingresada (ejemplo: convertir a mayúsculas)
-      var result = palabra.toUpperCase();
-
-      // Devolver el resultado
-      return result;
+      // Mostrar el resultado en el párrafo con id "plantaObtenida"
+      document.getElementById('result').textContent = biomeInput;
 }
