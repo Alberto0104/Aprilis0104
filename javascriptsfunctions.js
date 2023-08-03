@@ -20,7 +20,7 @@ public class ObjectPlant{
 	}
 
 	public String[] getBiomeStrings(){
-		return biomeStrings;
+		return biomesStrings;
 	}
 
 	public void setBiomesStrings(String[] biomesStrings){
