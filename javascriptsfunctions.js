@@ -15,11 +15,11 @@ public class ObjectPlant{
 	private String rarityString;
 
 	public ObjectPlant(String[] biomesStrings, String rarityString){
-		this.biomesString = biomesStrings;
+		this.biomesStrings = biomesStrings;
 		this.rarityString = rarityString;
 	}
 
-	public String[] getBiomeStrings(){
+	public String[] getBiomesStrings(){
 		return biomesStrings;
 	}
 
@@ -31,7 +31,7 @@ public class ObjectPlant{
 		return rarityString;
 	}
 
-	public void setRarityStrings(String rarityStrings){
+	public void setRarityStrings(String rarityString){
 		this.rarityString = rarityString;
 	}
 
