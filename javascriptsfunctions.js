@@ -11,30 +11,17 @@ function myFunction() {
 
 class ObjectPlant{
 
-	constructor(biomesStrings, rarityString){
+	constructor(nameString, biomesStrings, rarityString){
+		this.nameString = nameString;
 		this.biomesStrings = biomesStrings;
 		this.rarityString = rarityString;
 	}
-
-	getBiomesStrings(){
-		return biomesStrings;
-	}
-
-	setBiomesStrings(biomesStrings){
-		this.biomesStrings = biomesStrings;
-	}
-
-	getRarityString(){
-		return rarityString;
-	}
-
-	setRarityStrings(rarityString){
-		this.rarityString = rarityString;
-	}
-
-	
 
 }
+
+
+const plantas = [new ObjectPlant("",[""],"")];
+
 
 function PlantRandomizer() {
       // Obtener el bioma y dado ingresado por el jugador
