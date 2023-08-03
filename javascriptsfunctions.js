@@ -9,29 +9,26 @@ function myFunction() {
   }
 
 
-public class ObjectPlant{
+class ObjectPlant{
 
-	private String[] biomesStrings;
-	private String rarityString;
-
-	public ObjectPlant(String[] biomesStrings, String rarityString){
+	constructor(biomesStrings, rarityString){
 		this.biomesStrings = biomesStrings;
 		this.rarityString = rarityString;
 	}
 
-	public String[] getBiomesStrings(){
+	getBiomesStrings(){
 		return biomesStrings;
 	}
 
-	public void setBiomesStrings(String[] biomesStrings){
+	setBiomesStrings(biomesStrings){
 		this.biomesStrings = biomesStrings;
 	}
 
-	public String getRarityString(){
+	getRarityString(){
 		return rarityString;
 	}
 
-	public void setRarityStrings(String rarityString){
+	setRarityStrings(rarityString){
 		this.rarityString = rarityString;
 	}
 
