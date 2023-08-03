@@ -20,14 +20,29 @@ class ObjectPlant{
 }
 
 
-const plantas = [new ObjectPlant("",[""],"")];
+const plantas = [
+	new ObjectPlant("Allathorne",["Artic"],"Common")]
+	new ObjectPlant("Arctic Creeper",["Artic"],"Common")]
+	new ObjectPlant("Ardulan",["Artic"],"Uncommon")]
+	new ObjectPlant("Avataer",["Artic"],"Very Rare")]
+	new ObjectPlant("Basilisk Breath",["Artic"],"Very Rare")]
+	new ObjectPlant("Bee Balm",["Artic"],"Very Common")]
+	new ObjectPlant("Bija Tree",["Artic"],"Rare")];
 
 
 function PlantRandomizer() {
       // Obtener el bioma y dado ingresado por el jugador
       var biomeInput = document.getElementById('idBiome').value;
-					var diceInput = document.getElementById('idDice').value;
+					var diceInput = parseInt(document.getElementById('idDice').value);
 
+					const plantBiome = plantas.filter((planta) => planta.biomesStrings.includes(biomeInput));
+
+					if (diceInput => 1 && diceInput <= 55){
+						const plantBiomeRarity = plantBiome.filter((planta) => planta.rarityString == "Common"
+					}
+
+					var plantafinal = Math.floor(Math.random() * plantBiomeRarity.length);
+	
       // Mostrar el resultado en el párrafo con id "plantaObtenida"
-      document.getElementById('plantaObtenida').textContent = biomeInput + diceInput;
+      document.getElementById('plantaObtenida').textContent = plantBiomeRarity[plantafinal].nameString;
 }
