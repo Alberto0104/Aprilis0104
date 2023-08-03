@@ -38,8 +38,9 @@ function PlantRandomizer() {
 
 					const plantBiome = plantas.filter((planta) => planta.biomesStrings.includes(biomeInput));
 
+					let plantBiomeRarity = [];
 					if (diceInput >= 1 && diceInput <= 55){
-						const plantBiomeRarity = plantBiome.filter((planta) => planta.rarityString == "Common")
+						plantBiomeRarity = plantBiome.filter((planta) => planta.rarityString == "Common")
 					}
 
 					var plantafinal = Math.floor(Math.random() * plantBiomeRarity.length);
