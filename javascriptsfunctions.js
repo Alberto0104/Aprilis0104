@@ -12,9 +12,10 @@ function myFunction() {
 
 
 function PlantRandomizer() {
-      // Obtener el bioma ingresado por el jugador
+      // Obtener el bioma y dado ingresado por el jugador
       var biomeInput = document.getElementById('idBiome').value;
+					var diceInput = document.getElementById('idDice').value;
 
       // Mostrar el resultado en el párrafo con id "plantaObtenida"
-      document.getElementById('result').textContent = biomeInput;
+      document.getElementById('result').textContent = biomeInput + diceInput;
 }
