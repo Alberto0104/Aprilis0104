@@ -9,7 +9,35 @@ function myFunction() {
   }
 
 
+public class ObjectPlant{
 
+	private String[] biomesStrings;
+	private String rarityString;
+
+	public ObjectPlant(String[] biomesStrings, String rarityString){
+		this.biomesString = biomesStrings;
+		this.rarityString = rarityString;
+	}
+
+	public String[] getBiomeStrings(){
+		return biomeStrings;
+	}
+
+	public void setBiomesStrings(String[] biomesStrings){
+		this.biomesStrings = biomesStrings;
+	}
+
+	public String getRarityString(){
+		return rarityString;
+	}
+
+	public void setRarityStrings(String rarityStrings){
+		this.rarityString = rarityString;
+	}
+
+	
+
+}
 
 function PlantRandomizer() {
       // Obtener el bioma y dado ingresado por el jugador
