@@ -21,13 +21,14 @@ class ObjectPlant{
 
 
 const plantas = [
-	new ObjectPlant("Allathorne",["Artic"],"Common")]
-	new ObjectPlant("Arctic Creeper",["Artic"],"Common")]
-	new ObjectPlant("Ardulan",["Artic"],"Uncommon")]
-	new ObjectPlant("Avataer",["Artic"],"Very Rare")]
-	new ObjectPlant("Basilisk Breath",["Artic"],"Very Rare")]
-	new ObjectPlant("Bee Balm",["Artic"],"Very Common")]
-	new ObjectPlant("Bija Tree",["Artic"],"Rare")];
+	new ObjectPlant("Allathorne",["Artic"],"Common"),
+	new ObjectPlant("Arctic Creeper",["Artic"],"Common"),
+	new ObjectPlant("Ardulan",["Artic"],"Uncommon"),
+	new ObjectPlant("Avataer",["Artic"],"Very Rare"),
+	new ObjectPlant("Basilisk Breath",["Artic"],"Very Rare"),
+	new ObjectPlant("Bee Balm",["Artic"],"Very Common"),
+	new ObjectPlant("Bija Tree",["Artic"],"Rare")
+];
 
 
 function PlantRandomizer() {
@@ -37,8 +38,8 @@ function PlantRandomizer() {
 
 					const plantBiome = plantas.filter((planta) => planta.biomesStrings.includes(biomeInput));
 
-					if (diceInput => 1 && diceInput <= 55){
-						const plantBiomeRarity = plantBiome.filter((planta) => planta.rarityString == "Common"
+					if (diceInput >= 1 && diceInput <= 55){
+						const plantBiomeRarity = plantBiome.filter((planta) => planta.rarityString == "Common")
 					}
 
 					var plantafinal = Math.floor(Math.random() * plantBiomeRarity.length);
