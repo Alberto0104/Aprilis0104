@@ -672,22 +672,22 @@ function PlantRandomizer() {
 
 	let plantBiomeRarity = [];
 	if (diceInput >= 1 && diceInput <= 55){
-		plantBiomeRarity = plantBiome.filter((planta) => planta.rarityString == "Very Common")
+		plantBiomeRarity = plantBiome.filter((planta) => planta.rarityString == "Very Common");
 	}
 	else if (diceInput >= 56 && diceInput <= 81){
-		plantBiomeRarity = plantBiome.filter((planta) => planta.rarityString == "Common")
+		plantBiomeRarity = plantBiome.filter((planta) => planta.rarityString == "Common");
 	}
 	else if (diceInput >= 82 && diceInput <= 93){
-		plantBiomeRarity = plantBiome.filter((planta) => planta.rarityString == "Uncommon")
+		plantBiomeRarity = plantBiome.filter((planta) => planta.rarityString == "Uncommon");
 	}
 	else if (diceInput >= 94 && diceInput <= 98){
-		plantBiomeRarity = plantBiome.filter((planta) => planta.rarityString == "Rare")
+		plantBiomeRarity = plantBiome.filter((planta) => planta.rarityString == "Rare");
 	}
 	else if (diceInput == 99){
-		plantBiomeRarity = plantBiome.filter((planta) => planta.rarityString == "Very Rare")
+		plantBiomeRarity = plantBiome.filter((planta) => planta.rarityString == "Very Rare");
 	}
 	else if (diceInput == 100){
-		plantBiomeRarity = plantBiome.filter((planta) => planta.rarityString == "Legendary" || plantBiome.filter((planta) => planta.rarityString == "Very Rare"))
+		plantBiomeRarity = plantBiome.filter((planta) => planta.rarityString == "Legendary" || planta.rarityString == "Very Rare");
 	}
 
 	var plantafinal = Math.floor(Math.random() * plantBiomeRarity.length);
