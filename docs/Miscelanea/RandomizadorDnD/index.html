@@ -45,7 +45,21 @@ Especial mención a ..., autor del documento en el que se basa este pequeño pro
 	
 
 		<div>
-					<input type="text" id="idBiome" placeholder="Biome">
+					<input list="Biomes" name="Biome" id = "idBiome" placeholder="Biome">
+						<datalist id="Biomes">
+							<option value="Arctic">
+							<option value="Cities">
+							<option value="Coastal">
+							<option value="Deserts">							
+							<option value="Forests">
+							<option value="Jungles">
+							<option value="Mountains">
+							<option value="Oceans">
+							<option value="Plains">
+							<option value="Rivers">
+							<option value="Swamps">
+							<option value="Underdark/Caves">
+					<!-- <input type="text" id="idBiome" placeholder="Biome"> -->
 					<input type="text" id="idDice" placeholder="Dice Result 0-100">
   				<button onclick="PlantRandomizer()">Planta</button>
   				<p id="plantaObtenida"></p>
