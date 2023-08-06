@@ -695,5 +695,5 @@ function PlantRandomizer() {
  // Mostrar el resultado en el párrafo con id "plantaObtenida"
  //document.getElementById('plantaObtenida').textContent = plantBiomeRarity[plantafinal].nameString;
 
-//document.getElementById('plantaObtenida').textContent = biomeInput;
+document.getElementById('plantaObtenida').textContent = biomeInput;
 }
