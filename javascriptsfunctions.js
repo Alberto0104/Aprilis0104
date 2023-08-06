@@ -134,7 +134,6 @@ const plantas = [
 	new ObjectPlant("Caffar",["Jungles"],"Common"),
 	new ObjectPlant("Calacaza Bush",["Deserts","Jungles"],"Uncommon"),
 	new ObjectPlant("Calamus",["Coastal","Jungles","Rivers"],"Common"),
-	new ObjectPlant("Calamus",["Jungles","Rivers"],"Common"),
 	new ObjectPlant("Calcena Mushroom",["Underdark/Caves"],"Rare"),
 	new ObjectPlant("Calithil",["Mountains"],"Common"),
 	new ObjectPlant("Callin",["Jungles"],"Very Common"),
