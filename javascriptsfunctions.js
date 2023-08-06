@@ -687,7 +687,7 @@ function PlantRandomizer() {
 		plantBiomeRarity = plantBiome.filter((planta) => planta.rarityString == "Very Rare")
 	}
 	else if (diceInput == 100){
-		plantBiomeRarity = plantBiome.filter((planta) => planta.rarityString == "Legendary" && plantBiome.filter((planta) => planta.rarityString == "very Rare")
+		plantBiomeRarity = plantBiome.filter((planta) => planta.rarityString == "Legendary" || plantBiome.filter((planta) => planta.rarityString == "Very Rare"))
 	}
 
 	var plantafinal = Math.floor(Math.random() * plantBiomeRarity.length);
