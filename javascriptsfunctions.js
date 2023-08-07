@@ -624,7 +624,7 @@ const plantas = [
 	new ObjectPlant("Waterorb",["Coastal"],"Common"),
 	new ObjectPlant("Waxtree",["Forests"],"Very Rare"),
 	new ObjectPlant("Waxworm",["Forests"],"Very Common"),
- new ObjectPlant("Weeping Tree",["Forests"],"Very Common"),
+	new ObjectPlant("Weeping Tree",["Forests"],"Very Common"),
 	new ObjectPlant("Weirwood",["Forests"],"Uncommon"),
 	new ObjectPlant("Werasa",["Cities","Plains"],"Common"),
 	new ObjectPlant("Whistling Cactus",["Deserts"],"Uncommon"),
@@ -693,7 +693,7 @@ function PlantRandomizer() {
 	var plantafinal = Math.floor(Math.random() * plantBiomeRarity.length);
 	
  // Mostrar el resultado en el párrafo con id "plantaObtenida"
- //document.getElementById('plantaObtenida').textContent = plantBiomeRarity[plantafinal].nameString;
+ document.getElementById('plantaObtenida').textContent = plantBiomeRarity[plantafinal].nameString + " " + plantBiomeRarity[plantafinal].rarityString;
 
-document.getElementById('plantaObtenida').textContent = biomeInput;
+	//document.getElementById('plantaObtenida').textContent = biomeInput;
 }
