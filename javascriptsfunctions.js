@@ -624,7 +624,7 @@ const plantas = [
 	new ObjectPlant("Waterorb",["Coastal"],"Common"),
 	new ObjectPlant("Waxtree",["Forests"],"Very Rare"),
 	new ObjectPlant("Waxworm",["Forests"],"Very Common"),
- new ObjectPlant("Weeping Tree",["Forests","Very Common"],
+ new ObjectPlant("Weeping Tree",["Forests"],"Very Common"),
 	new ObjectPlant("Weirwood",["Forests"],"Uncommon"),
 	new ObjectPlant("Werasa",["Cities","Plains"],"Common"),
 	new ObjectPlant("Whistling Cactus",["Deserts"],"Uncommon"),
