@@ -693,7 +693,12 @@ function PlantRandomizer() {
 	var plantafinal = Math.floor(Math.random() * plantBiomeRarity.length);
 	
  // Mostrar el resultado en el párrafo con id "plantaObtenida"
- document.getElementById('plantaObtenida').textContent = plantBiomeRarity[plantafinal].nameString + " " + plantBiomeRarity[plantafinal].rarityString;
+	if (biomeInput == "Oceans" && plantBiomeRarity.length == 0){
+		document.getElementById('plantaObtenida').textContent = "No " + plantBiomeRarity[plantafinal].rarityString + " plant found"
+	}
+	else{
+		document.getElementById('plantaObtenida').textContent = plantBiomeRarity[plantafinal].rarityString + " - " + plantBiomeRarity[plantafinal].nameString;
+	}
+ 
 
-	//document.getElementById('plantaObtenida').textContent = biomeInput;
 }
