@@ -18,25 +18,25 @@ document.getElementById('generateButton').addEventListener('click', async () => 
 });
 
 function procesarArchivos(data, template) {
-    try{
-						const inputData = JSON.parse(data);
-						const templateObj = JSON.parse(template)
+	try{
+		const inputData = JSON.parse(data);
+		const templateObj = JSON.parse(template)
 
-						for (const key in templateObj){
-									if (inputData.hasOwnProperty(key)){
-												if (!isNaN(inputData[key])){
-															templateObj[key] = parseFloat(inputData[key]);
-												} else{
-															templatObj[key] = inputData[key];
-												}
-									}
-						}
+		for (const key in templateObj){
+			if (inputData.hasOwnProperty(key)){
+				if (!isNaN(inputData[key])){
+					templateObj[key] = parseFloat(inputData[key]);
+				} else{
+					templatObj[key] = inputData[key];
+				}
+			}
+		}
 
-			const resultado = JSON.stringify(templateObj, null, 2);
-			return resultado;
-			} catch (error){
+		const resultado = JSON.stringify(templateObj, null, 2);
+		return resultado;
+	} catch (error){
 						console.error('Error al procesar los archivos:', error);
 						return 'Error al procesar los archivos';
-			}
+	}
 }
 
