@@ -1,20 +1,20 @@
 document.getElementById('generateButton').addEventListener('click', async () => {
-			const dataFile = document.getElementById('dataFile').files[0];
-			const templateFile = document.getElementById('templateFile').files[0];
+	const dataFile = document.getElementById('dataFile').files[0];
+	const templateFile = document.getElementById('templateFile').files[0];
 
-    if (dataFile && templateFile) {
-        const dataText = await dataFile.text();
-        const templateText = await templateFile.text();
+	if (dataFile && templateFile) {
+ 		const dataText = await dataFile.text();
+ 		const templateText = await templateFile.text();
 
-        // Procesar los archivos y generar el resultado
-        const resultado = procesarArchivos(dataText, templateText);
+  	// Procesar los archivos y generar el resultado
+  	const resultado = procesarArchivos(dataText, templateText);
 
-        // Crear un Blob con el resultado y crear un enlace de descarga
-        const blob = new Blob([resultado], { type: 'text/plain' });
-        const downloadLink = document.getElementById('downloadLink');
-        downloadLink.href = URL.createObjectURL(blob);
-        downloadLink.style.display = 'block';
-    }
+  	// Crear un Blob con el resultado y crear un enlace de descarga
+  	const blob = new Blob([resultado], { type: 'text/plain' });
+  	const downloadLink = document.getElementById('downloadLink');
+  	downloadLink.href = URL.createObjectURL(blob);
+  	downloadLink.style.display = 'block';
+	}
 });
 
 function procesarArchivos(data, template) {
