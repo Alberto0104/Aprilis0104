@@ -27,7 +27,7 @@ function procesarArchivos(data, template) {
 				if (!isNaN(inputData[key])){
 					templateObj[key] = parseFloat(inputData[key]);
 				} else{
-					templatObj[key] = inputData[key];
+					templateObj[key] = inputData[key];
 				}
 			}
 		}
