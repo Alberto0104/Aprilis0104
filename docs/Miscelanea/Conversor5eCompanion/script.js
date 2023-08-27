@@ -10,7 +10,8 @@ document.getElementById('generateButton').addEventListener('click', async () => 
   	const resultado = procesarArchivos(dataText, templateText);
 
   	// Crear un Blob con el resultado y crear un enlace de descarga
-  	const blob = new Blob([resultado], { type: 'text/plain' });
+		const blob = new Blob([resultado], { type: 'application/octet-stream' });
+  	//const blob = new Blob([resultado], { type: 'text/plain' });
   	const downloadLink = document.getElementById('downloadLink');
   	downloadLink.href = URL.createObjectURL(blob);
   	downloadLink.style.display = 'block';
