@@ -158,40 +158,62 @@ const plantas = [
 
 
 function PlantRandomizer() {
-	// Obtener el bioma y dado ingresado por el jugador
+	// Obtain biome and dice value by input from player
  var biomeInput = document.getElementById('idBiome').value;
 	var diceInput = parseInt(document.getElementById('idDice').value);
 
 	const plantBiome = plantas.filter((planta) => planta.biomesStrings.includes(biomeInput));
 
+	const rarity = ["Very Common", "Common", "Uncommon", "Rare", "Very Rare", "Legendary"];
+	var rarityValue = 0;
+
 	let plantBiomeRarity = [];
 	if (diceInput >= 1 && diceInput <= 55){
-		plantBiomeRarity = plantBiome.filter((planta) => planta.rarityString == "Very Common");
+		rarityValue = 0;
 	}
 	else if (diceInput >= 56 && diceInput <= 81){
-		plantBiomeRarity = plantBiome.filter((planta) => planta.rarityString == "Common");
+		rarityValue = 1;
 	}
 	else if (diceInput >= 82 && diceInput <= 93){
-		plantBiomeRarity = plantBiome.filter((planta) => planta.rarityString == "Uncommon");
+		rarityValue = 2;
 	}
 	else if (diceInput >= 94 && diceInput <= 98){
-		plantBiomeRarity = plantBiome.filter((planta) => planta.rarityString == "Rare");
+		rarityValue = 3;
 	}
 	else if (diceInput == 99){
-		plantBiomeRarity = plantBiome.filter((planta) => planta.rarityString == "Very Rare");
+		rarityValue = 4;
 	}
 	else if (diceInput == 100){
-		plantBiomeRarity = plantBiome.filter((planta) => planta.rarityString == "Legendary" || planta.rarityString == "Very Rare");
+		rarityValue = 5;
 	}
 
+	// Fill the list with all the plants that matches the rarity. In case there isn't any plant, fill with the previous rarity.
+	var checkRarity = 0;
+	do{	
+		checkRarity = checkRarity + 1;
+		if (rarityValue >= 0 && rarityValue <= 4){
+			plantBiomeRarity = plantBiome.filter((planta) => planta.rarityString == rarity[rarityValue]);
+		}
+		else if (rarityValue == 5){
+			plantBiomeRarity = plantBiome.filter((planta) => planta.rarityString == rarity[rarityValue] || planta.rarityString == rarity[rarityValue-1]);
+		}
+	} while (plantBiomeRarity.length == 0);
+	
 	var plantafinal = Math.floor(Math.random() * plantBiomeRarity.length);
 	
- // Mostrar el resultado en el párrafo con id "plantaObtenida"
-	if (biomeInput == "Oceans" && plantBiomeRarity.length == 0){
-		document.getElementById('plantaObtenida').textContent = "No " + plantBiomeRarity[plantafinal].rarityString + " plant found"
+	// Display the result with the paragraph with id "plantaObtenida"
+	//if (biomeInput == "Oceans" && plantBiomeRarity.length == 0){
+	//	document.getElementById('plantaObtenida').textContent = "No " + plantBiomeRarity[plantafinal].rarityString + " plant found"
+	//}
+	//else{
+	//	document.getElementById('plantaObtenida').textContent = plantBiomeRarity[plantafinal].rarityString + " - " + plantBiomeRarity[plantafinal].nameString;
+	//}
+
+	if (checkRarity =! 0){
+		document.getElementById('plantaObtenida').textContent = "No " + plantBiomeRarity[plantafinal].rarityString + " plant found with this rarity. But you found this other plant: " + plantBiomeRarity[plantafinal].rarityString + " - " + plantBiomeRarity[plantafinal].nameString;
 	}
 	else{
-		document.getElementById('plantaObtenida').textContent = plantBiomeRarity[plantafinal].rarityString + " - " + plantBiomeRarity[plantafinal].nameString;
+		document.getElementById('plantaObtenida').textContent = "You found this plant: " + plantBiomeRarity[plantafinal].rarityString + " - " + plantBiomeRarity[plantafinal].nameString;
 	}
  
 
