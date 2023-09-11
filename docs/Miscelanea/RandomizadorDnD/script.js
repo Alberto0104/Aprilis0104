@@ -209,8 +209,8 @@ function PlantRandomizer() {
 	//	document.getElementById('plantaObtenida').textContent = plantBiomeRarity[plantafinal].rarityString + " - " + plantBiomeRarity[plantafinal].nameString;
 	//}
 
-	if (checkRarity =! 0){
-		document.getElementById('plantaObtenida').textContent = "No " + plantBiomeRarity[plantafinal].rarityString + " plant found with this rarity. But you found this other plant: " + plantBiomeRarity[plantafinal].rarityString + " - " + plantBiomeRarity[plantafinal].nameString;
+	if (checkRarity > 1){
+		document.getElementById('plantaObtenida').textContent = "No plant found with this rarity (" + plantBiomeRarity[plantafinal].rarityString + ")" + But you found this other plant: " + plantBiomeRarity[plantafinal].rarityString + " - " + plantBiomeRarity[plantafinal].nameString;
 	}
 	else{
 		document.getElementById('plantaObtenida').textContent = "You found this plant: " + plantBiomeRarity[plantafinal].rarityString + " - " + plantBiomeRarity[plantafinal].nameString;
