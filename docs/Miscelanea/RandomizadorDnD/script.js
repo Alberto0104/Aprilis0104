@@ -682,33 +682,37 @@ function PlantRandomizer() {
 		rarityValue = 5;
 	}
 
-	// Fill the list with all the plants that matches the rarity. In case there isn't any plant, fill with the previous rarity.
-	var checkRarity = 0;
+	// Fill the list with all the plants that matches the rarity. In case there isn't any plant, fill with the previous rarity, trying all the previous raritys.
+	var searchRarity = rarityValue + 1;
 	do{	
-		checkRarity = checkRarity + 1;
-		if (rarityValue >= 0 && rarityValue <= 4){
-			plantBiomeRarity = plantBiome.filter((planta) => planta.rarityString == rarity[rarityValue]);
+		// In case it doesn't found plants that matches the rarity, it will decrease it's value by one, until there isn't any.
+		searchRarity = searchRarity - 1;
+		
+		if (searchRarity >= 0 && searchRarity <= 4){
+			plantBiomeRarity = plantBiome.filter((planta) => planta.rarityString == rarity[searchRarity]);
 		}
-		else if (rarityValue == 5){
-			plantBiomeRarity = plantBiome.filter((planta) => planta.rarityString == rarity[rarityValue] || planta.rarityString == rarity[rarityValue-1]);
-		}
-	} while (plantBiomeRarity.length == 0);
-	
-	var plantafinal = Math.floor(Math.random() * plantBiomeRarity.length);
-	
-	// Display the result with the paragraph with id "plantaObtenida"
-	//if (biomeInput == "Oceans" && plantBiomeRarity.length == 0){
-	//	document.getElementById('plantaObtenida').textContent = "No " + plantBiomeRarity[plantafinal].rarityString + " plant found"
-	//}
-	//else{
-	//	document.getElementById('plantaObtenida').textContent = plantBiomeRarity[plantafinal].rarityString + " - " + plantBiomeRarity[plantafinal].nameString;
-	//}
+		else if (searchRarity == 5){
+			plantBiomeRarity = plantBiome.filter((planta) => planta.rarityString == rarity[searchRarity] || planta.rarityString == rarity[searchRarity-1]);
+		}	
+	} while (plantBiomeRarity.length == 0 && searchRarity > 0);
 
-	if (checkRarity > 1){
+
+	// Select a random plant from the final list
+	var plantafinal = Math.floor(Math.random() * plantBiomeRarity.length);
+
+
+	// We check if the value of the search in rarity is the same as the original or not.
+	if (plantBiomeRarity.length == 0){
+		document.getElementById('plantaObtenida').textContent = "No plant found with this rarity (" + rarity[rarityValue] + ")";
+	}
+	else if (plantBiomeRarity.length != 0 && searchRarity != rarityValue){
 		document.getElementById('plantaObtenida').textContent = "No plant found with this rarity (" + rarity[rarityValue] + ") But you found this other plant: " + plantBiomeRarity[plantafinal].rarityString + " - " + plantBiomeRarity[plantafinal].nameString;
 	}
-	else{
+	else if (plantBiomeRarity.length != 0 && searchRarity == rarityValue){
 		document.getElementById('plantaObtenida').textContent = "You found this plant: " + plantBiomeRarity[plantafinal].rarityString + " - " + plantBiomeRarity[plantafinal].nameString;
+	}
+	else{
+		document.getElementById('plantaObtenida').textContent = "There was an error and this message shouldn't appear on the website."
 	}
  
 
