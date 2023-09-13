@@ -706,7 +706,8 @@ function PlantRandomizer() {
 		document.getElementById('plantaObtenida').textContent = "No plant found with this rarity (" + rarity[rarityValue] + ")";
 	}
 	else if (plantBiomeRarity.length != 0 && searchRarity != rarityValue){
-		document.getElementById('plantaObtenida').textContent = "No plant found with this rarity (" + rarity[rarityValue] + ") But you found this other plant: " + plantBiomeRarity[plantafinal].rarityString + " - " + plantBiomeRarity[plantafinal].nameString;
+		document.getElementById('plantaObtenida').textContent = "No plant found with this rarity (" + rarity[rarityValue] + ");
+		document.getElementById('plantaObtenida').innerHTML += "<br />" "But you found this other plant: " + plantBiomeRarity[plantafinal].rarityString + " - " + plantBiomeRarity[plantafinal].nameString;
 	}
 	else if (plantBiomeRarity.length != 0 && searchRarity == rarityValue){
 		document.getElementById('plantaObtenida').textContent = "You found this plant: " + plantBiomeRarity[plantafinal].rarityString + " - " + plantBiomeRarity[plantafinal].nameString;
