@@ -346,6 +346,28 @@ z-index: 2;
 
 
 
+/* Input box for DnD Plant Randomizer */
+
+.DnD-Plant-Randomizer-box{
+    border: 3px solid black;
+    text-align: center;
+    background: #cae3ba;
+    max-width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.DnD-Plant-Randomizer-box h1{
+    font-size: 1.5em;
+    text-decoration: underline;
+    display: inline-block;
+    text-align: justify;
+}
+
+.DnD-Plant-Randomizer-box .DnD-Plant-Randomizer-subbox{
+    display: flex;
+    justify-content: space-between;
+}
 
 
 
@@ -360,6 +382,9 @@ z-index: 2;
 
 
 
+
+
+/*Los queries deben ir al final, o en un css aparte vinculado*/
 /* Add media queries for responsiveness - when the screen is 'x'px wide or less*/
 @media screen and (max-width: 900px) {
     /*Box, from 3 to 1 in a row*/

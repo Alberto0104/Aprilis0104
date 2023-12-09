@@ -44,25 +44,42 @@ Especial mención a ..., autor del documento en el que se basa este pequeño pro
 
 	
 
-		<div>
-			<input list="Biomes" name="Biome" id = "idBiome" placeholder="Biome">
-				<datalist id="Biomes">
-					<option value="Arctic">
-					<option value="Cities">
-					<option value="Coastal">
-					<option value="Deserts">							
-					<option value="Forests">
-					<option value="Jungles">
-					<option value="Mountains">
-					<option value="Oceans">
-					<option value="Plains">
-					<option value="Rivers">
-					<option value="Swamps">
-					<option value="Underdark/Caves">
-				</datalist>
-			<!-- <input type="text" id="idBiome" placeholder="Biome"> -->
-			<input type="text" id="idDice" placeholder="Dice Result 0-100">
+		<div class="DnD-Plant-Randomizer-box">
+      <h1>Modo</h1>
+      <div class="DnD-Plant-Randomizer-subbox">
+        <div></div>
+        <h1>Bioma</h1>
+        <div></div>
+        <h1>Dado</h1>
+        <div></div>
+      </div>
+      <div class="DnD-Plant-Randomizer-subbox">
+        <div></div>
+        <input list="Biomes" name="Biome" id = "idBiome" placeholder="Biome">
+          <datalist id="Biomes">
+            <option value="Arctic">
+            <option value="Cities">
+            <option value="Coastal">
+            <option value="Deserts">							
+            <option value="Forests">
+            <option value="Jungles">
+            <option value="Mountains">
+            <option value="Oceans">
+            <option value="Plains">
+            <option value="Rivers">
+            <option value="Swamps">
+            <option value="Underdark/Caves">
+          </datalist>
+			  <!-- <input type="text" id="idBiome" placeholder="Biome"> -->
+			  <div></div>
+        <input type="text" id="idDice" placeholder="Dice Result 0-100">
+        <div></div>
+      </div>
+      <br />
   		<button onclick="PlantRandomizer()">Planta</button>
+      
+      <hr>
+      
   		<p id="plantaObtenida"></p>
 		</div>
 

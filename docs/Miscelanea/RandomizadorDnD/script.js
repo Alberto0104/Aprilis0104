@@ -650,7 +650,7 @@ const plantas = [
 	new ObjectPlant("Zurkhwood",["Underdark/Caves"],"Common")
 ];
 
-
+document.getElementById('plantaObtenida').textContent = "Waiting to find a plant.";
 
 function PlantRandomizer() {
 	// Obtain biome and dice value by input from player
