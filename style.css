@@ -369,6 +369,9 @@ z-index: 2;
     justify-content: space-between;
 }
 
+#idBiome #idDice{
+    max-width: 20%;
+}
 
 
 
@@ -436,5 +439,15 @@ z-index: 2;
     .header.responsive .header-right{
         float: left;
         width: 100%;
+    }
+}
+
+
+
+/*For adjusting the format of plant randomizer box*/
+
+@media screen and (max-width: 600px) {
+    #idBiome #idDice{
+        width: 30%;
     }
 }
