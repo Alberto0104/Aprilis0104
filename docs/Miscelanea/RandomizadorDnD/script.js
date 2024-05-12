@@ -1,15 +1,16 @@
 class ObjectPlant{
 
-	constructor(nameString, biomesStrings, rarityString){
+	constructor(nameString, biomesStrings, rarityString, descriptionString){
 		this.nameString = nameString;
 		this.biomesStrings = biomesStrings;
 		this.rarityString = rarityString;
+		this.descriptionString = descriptionString;
 	}
 
 }
 
 const plantas = [
-	new ObjectPlant("Aadarna",["Swamps"],"Rare"),
+	new ObjectPlant("Aadarna",["Swamps"],"Rare","A tough plant that grows on the edges of swamps, the stem grows symmetrical pairs of stiff oval leaves. During warmer months the plant blossoms into violet flowers. The large roots of the plant can be ground into a powder and is the main ingredient in a potion that allows other people to see into other realms, often referred to as Sight Beyond. For the next hour after drinking, the vision of the character shifts to the Astral Realm. They may perceive what happens from a position that corresponds to their location in the Material Realm. During that time, they are blind to everything that happens in the Material Realm, including combat."),
 	new ObjectPlant("Abyssal Blackgrass",["Underdark/Caves"],"Uncommon"),
 	new ObjectPlant("Acacia Tree",["Jungles","Plains"],"Common"),
 	new ObjectPlant("Acai Berries",["Jungles"],"Very Common"),
@@ -707,10 +708,10 @@ function PlantRandomizer() {
 	}
 	else if (plantBiomeRarity.length != 0 && searchRarity != rarityValue){
 		document.getElementById('plantaObtenida').textContent = "No plant found with this rarity (" + rarity[rarityValue] + ")";
-		document.getElementById('plantaObtenida').innerHTML += "<br />" + "But you found this other plant: " + plantBiomeRarity[plantafinal].rarityString + " - " + plantBiomeRarity[plantafinal].nameString;
+		document.getElementById('plantaObtenida').innerHTML += "<br />" + "But you found this other plant: " + plantBiomeRarity[plantafinal].rarityString + " - " + plantBiomeRarity[plantafinal].nameString + "\r\n" + plantBiomeRarity[plantafinal].descriptionString;
 	}
 	else if (plantBiomeRarity.length != 0 && searchRarity == rarityValue){
-		document.getElementById('plantaObtenida').textContent = "You found this plant: " + plantBiomeRarity[plantafinal].rarityString + " - " + plantBiomeRarity[plantafinal].nameString;
+		document.getElementById('plantaObtenida').textContent = "You found this plant: " + plantBiomeRarity[plantafinal].rarityString + " - " + plantBiomeRarity[plantafinal].nameString  + "\r\n" + plantBiomeRarity[plantafinal].descriptionString;
 	}
 	else{
 		document.getElementById('plantaObtenida').textContent = "There was an error and this message shouldn't appear on the website."
