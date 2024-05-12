@@ -712,7 +712,7 @@ function PlantRandomizer() {
 		document.getElementById('plantaObtenida').innerHTML += "<br />";
 		document.getElementById('plantaObtenida').innerHTML += "<br />" + "But you found this other plant: " + plantBiomeRarity[plantafinal].rarityString + " - " + plantBiomeRarity[plantafinal].nameString + "\r\n" + plantBiomeRarity[plantafinal].descriptionString;
 
-		document.getElementById('plantaObtenida').innerHTML += "<br />" + "But you found this other plant: " + plantBiomeRarity[plantafinal].rarityString + " - " + plantBiomeRarity[plantafinal].nameString ;
+		document.getElementById('plantaObtenida').innerHTML += "<br />";
 		document.getElementById('plantaObtenida').innerHTML += "<br />" +  plantBiomeRarity[plantafinal].descriptionString;
 	}
 	else if (plantBiomeRarity.length != 0 && searchRarity == rarityValue){
