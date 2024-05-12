@@ -708,12 +708,23 @@ function PlantRandomizer() {
 	}
 	else if (plantBiomeRarity.length != 0 && searchRarity != rarityValue){
 		document.getElementById('plantaObtenida').textContent = "No plant found with this rarity (" + rarity[rarityValue] + ")";
+<<<<<<< HEAD
+		document.getElementById('plantaObtenida').innerHTML += "<br />";
+		document.getElementById('plantaObtenida').innerHTML += "<br />" + "But you found this other plant: " + plantBiomeRarity[plantafinal].rarityString + " - " + plantBiomeRarity[plantafinal].nameString + "\r\n" + plantBiomeRarity[plantafinal].descriptionString;
+=======
 		document.getElementById('plantaObtenida').innerHTML += "<br />" + "But you found this other plant: " + plantBiomeRarity[plantafinal].rarityString + " - " + plantBiomeRarity[plantafinal].nameString ;
 		document.getElementById('plantaObtenida').innerHTML += "<br />" +  plantBiomeRarity[plantafinal].descriptionString;
+>>>>>>> a85a849d457104b9d77e4a3a01d5fe1c890fc0c8
 	}
 	else if (plantBiomeRarity.length != 0 && searchRarity == rarityValue){
+<<<<<<< HEAD
+		document.getElementById('plantaObtenida').textContent = "You found this plant: " + plantBiomeRarity[plantafinal].rarityString + " - " + plantBiomeRarity[plantafinal].nameString ;
+		document.getElementById('plantaObtenida').innerHTML += "<br />"
+		document.getElementById('plantaObtenida').innerHTML += "<br />" + plantBiomeRarity[plantafinal].descriptionString;
+=======
 		document.getElementById('plantaObtenida').textContent = "You found this plant: " + plantBiomeRarity[plantafinal].rarityString + " - " + plantBiomeRarity[plantafinal].nameString;
 		document.getElementById('plantaObtenida').innerHTML += "<br />" +  plantBiomeRarity[plantafinal].descriptionString;
+>>>>>>> a85a849d457104b9d77e4a3a01d5fe1c890fc0c8
 	}
 	else{
 		document.getElementById('plantaObtenida').textContent = "There was an error and this message shouldn't appear on the website."
