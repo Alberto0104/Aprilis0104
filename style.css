@@ -278,7 +278,7 @@ hr{
 /* Model for sensors */
 .inrow-background{
     width: 100%;
-    height: 150px;
+    height: 100px;
     background: #acb3b9;
     position: relative;
     background-repeat: no-repeat;
@@ -293,7 +293,7 @@ hr{
 
 .inrow-text{
     width: 35%;
-    height: 150px;
+    height: 100px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -306,12 +306,12 @@ hr{
 
 .inrow-parallelogram {
 width: 60px;
-height: 150px;
+height: 100px;
 transform: skew(10deg);
 margin-top: auto;
 margin-bottom: auto;
 position: absolute;
-left: 47%;
+left: 50%;
 z-index: 2;
 }
 
@@ -405,12 +405,12 @@ z-index: 2;
 
     .inrow-parallelogram {
         width: 60px;
-        left: 43%;
+        left: 50%;
         transform: skew(10deg);
     }
     
     .inrow-background{
-        min-width: 300px;
+        min-width: 450px;
     }
 }
 
