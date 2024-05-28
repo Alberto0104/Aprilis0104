@@ -10,7 +10,7 @@ body{
 }
 
 hr{
-    background-color: black;
+    background-color: #000000;
     border-color: black;
 }
 
@@ -232,7 +232,7 @@ hr{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(233, 233, 233, 0.25);
+    background-color: rgba(172, 179, 185, 0.25);
 }
 
 .box:hover {
@@ -244,11 +244,11 @@ hr{
 }
 
 .box h2{
-    background-color: #f2f3f4e6;
+    background-color: rgba(225, 225, 225,0.9);
     border-radius: 10px;
     padding: 10px;
     margin-bottom: 10px;
-    border: 2px solid #626567;
+    border: 2px solid #ACB3B9;
     position: relative;
     z-index: 1;
     margin-top: auto;
@@ -258,11 +258,11 @@ hr{
 }
 
 .box p{
-    background-color: #f2f3f4e6;
+    background-color: rgba(225, 225, 225,0.9);
     border-radius: 10px;
     padding: 10px;
     margin-bottom: 10px;
-    border: 2px solid #626567;
+    border: 2px solid #ACB3B9;
     position: relative;
     z-index: 1;
     margin-top: auto;
@@ -279,7 +279,7 @@ hr{
 .inrow-background{
     width: 100%;
     height: 150px;
-    background: #151515;
+    background: #acb3b9;
     position: relative;
     background-repeat: no-repeat;
     background-position: right center;
@@ -322,7 +322,7 @@ z-index: 2;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(225, 225, 225, 0.85);
+    background-color: #acb3b9;
 }
 
 .inrow-parallelogram::before{
@@ -351,7 +351,7 @@ z-index: 2;
 .DnD-Plant-Randomizer-box{
     border: 3px solid black;
     text-align: center;
-    background: #cae3ba;
+    background: #acb3b9;
     max-width: 50%;
     margin-left: auto;
     margin-right: auto;
